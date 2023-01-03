@@ -1,8 +1,5 @@
 name: upload website
-
-on:
-  watch
-    types: started
+on: [pull_request, workflow_dispatch]
 
 jobs:
   deploy:
