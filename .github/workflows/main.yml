@@ -2,7 +2,7 @@ name: upload website
 
 on:
   watch
-    types: [started]
+    types: started
 
 jobs:
   deploy:
