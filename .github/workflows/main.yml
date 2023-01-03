@@ -16,4 +16,4 @@ jobs:
         aws-region: us-east-2
 
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./FRONT-END-PORTFOLIO/ s3://www.cm443.com --delete
+      run: aws s3 sync ./front-end-portfolio/ s3://www.cm443.com --delete
