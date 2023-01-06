@@ -326,17 +326,17 @@ ul#nav li.current a { color: #F06000; }
 }
 
 .photoshop {
-  	width: 60%;
+  	width: 90%;
   	-moz-animation: photoshop 2s ease;
   	-webkit-animation: photoshop 2s ease;
 }
 .illustrator {
-  	width: 55%;
+  	width: 90%;
   	-moz-animation: illustrator 2s ease;
   	-webkit-animation: illustrator 2s ease;
 }
 .wordpress {
-  	width: 50%;
+  	width: 90%;
   	-moz-animation: wordpress 2s ease;
   	-webkit-animation: wordpress 2s ease;
 }
@@ -346,12 +346,12 @@ ul#nav li.current a { color: #F06000; }
   	-webkit-animation: css 2s ease;
 }
 .html5 {
-  	width: 80%;
+  	width: 90%;
   	-moz-animation: html5 2s ease;
   	-webkit-animation: html5 2s ease;
 }
 .jquery {
-  	width: 50%;
+  	width: 90%;
   	-moz-animation: jquery 2s ease;
   	-webkit-animation: jquery 2s ease;
 }
@@ -464,8 +464,8 @@ ul#nav li.current a { color: #F06000; }
 .portfolio-item .item-wrap .link-icon {
    display: block;
    color: #fff;
-   height: 30px;
-   width: 30px;
+   height: 60px;
+   width: 60px;
    font-size: 18px;
    line-height: 30px;
    text-align: center;
