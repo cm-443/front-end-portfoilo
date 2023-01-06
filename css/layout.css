@@ -464,8 +464,8 @@ ul#nav li.current a { color: #F06000; }
 .portfolio-item .item-wrap .link-icon {
    display: block;
    color: #fff;
-   height: 60px;
-   width: 60px;
+   height: 30px;
+   width: 30px;
    font-size: 18px;
    line-height: 30px;
    text-align: center;
