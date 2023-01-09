@@ -672,6 +672,12 @@ call-to-action .button {
    color: #fff;
 }
 
+.new {
+   padding-top: 180px;
+   padding-bottom: 120px;
+
+}
+
 /*	Blockquotes */
 #testimonials blockquote {
    margin: 0 0px 30px 0px;
