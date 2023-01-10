@@ -364,7 +364,7 @@ ul#nav li.current a { color: #F06000; }
 
 @-moz-keyframes photoshop {
   0%   { width: 0px;  }
-  100% { width: 60%;  }
+  100% { width: 80%;  }
 }
 @-moz-keyframes illustrator {
   0%   { width: 0px;  }
@@ -389,7 +389,7 @@ ul#nav li.current a { color: #F06000; }
 
 @-webkit-keyframes photoshop {
   0%   { width: 0px;  }
-  100% { width: 60%;  }
+  100% { width: 80%;  }
 }
 @-webkit-keyframes illustrator {
   0%   { width: 0px;  }
