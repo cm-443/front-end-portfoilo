@@ -141,7 +141,7 @@ html {
    -webkit-font-smoothing: antialiased;
 }
 
-body {
+body { 
    background: #fff;
    font-family: 'opensans-regular', sans-serif;
    font-weight: normal;
