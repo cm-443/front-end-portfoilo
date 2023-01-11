@@ -243,7 +243,7 @@ ul#nav li.current a { color: #F06000; }
 }
 
 #resume a, #resume a:visited  { color: #11ABB0; }
-#resume a:hover, #resume a:focus { color: #313131; }
+#resume a:hover, #resume a:focus { color: #BFBFBF; }
 
 #resume h1 {
    font: 18px/24px 'opensans-bold', sans-serif;
