@@ -1,1 +1,1 @@
-This repo contains html, css, and javascript that is hosted in an s3 bucket. It also contains a file in .github/workflows that automatically deploys any changes to the s3 bucket when a push to main occurs.
+This repo contains html, css, and javascript that is hosted in a s3 bucket. It also contains a file in .github/workflows that automatically deploys any changes to the s3 bucket when a push to main occurs.
