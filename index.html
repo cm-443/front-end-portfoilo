@@ -20,10 +20,10 @@ function submitToAPI(e) {
        e.preventDefault();
        var URL = "https://hhmvl7pc53.execute-api.us-east-2.amazonaws.com/prod";
 
-       var contactName.val();
-       var contactEmail.val();
-       var contactSubject.val();
-       var contactMessage.val();
+       var contactName = $("#contactName").val();
+       var contactEmail = $("#contactEmail").val();
+       var contactSubject = $("#contactSubject").val();
+       var contactMessage = $("#contactMessage").val();
        var data = {
           contactName : contactName,
           contactEmail : contactEmail,
