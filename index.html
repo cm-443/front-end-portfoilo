@@ -42,13 +42,13 @@ function submitToAPI(e) {
          
          success: function () {
            // clear form and show a success message
-           alert("Successfull");
+           alert("Message Sent");
            document.getElementById("contact-form").reset();
        location.reload();
          },
          error: function () {
            // show an error message
-           alert("UnSuccessfull");
+           alert("Error");
          }});
      }	
 	
@@ -528,13 +528,13 @@ function submitToAPI(e) {
 					<fieldset>
 
                   <div>
-						   <label for="contactName">Name <span class="required">*</span></label>
-						   <input type="text" value="" size="35" id="contactName" name="contactName">
+						   <label for="contactEmail">Email <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
                   </div>
 
                   <div>
-						   <label for="contactEmail">Email <span class="required">*</span></label>
-						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
+						   <label for="contactName">Name <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="contactName" name="contactName">
                   </div>
 
                   <div>
