@@ -139,7 +139,7 @@ function submitToAPI(e) {
 
             <h2>About Me</h2>
 
-            <p>Thank you for checking out my portfolio! Below, you will find my resume, diagrams of 
+            <p>Thank you for viewing my portfolio! Below, you will find my resume, diagrams of 
                AWS projects I’ve worked on, 
                and a contact form built with serverless infrastructure. 
                In my free time, I enjoy reading, gaming, hiking, astronomy, gardening, and traveling. 
@@ -343,7 +343,7 @@ function submitToAPI(e) {
 
          <div class="twelve columns collapsed">
 
-            <h1>Check out some diagrams of my work</h1>
+            <h1>Project Diagrams</h1>
 
             <!-- portfolio-wrapper -->
             <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
@@ -427,7 +427,7 @@ function submitToAPI(e) {
 
 		      <div class="description-box">
 			      <h4>Automated DDoS Response</h4>
-			      <p>When a traffic metric is breached, a sns topic evokes a lambda function that queries Athena for suspicious ips, waits for the query to complete, and then posts a pre-signed s3 URL containing the results to a Microsoft teams channel. </p>
+			      <p>When a traffic metric is breached, an SNS topic invokes a Lambda function that queries Athena for suspicious ips, waits for the query to complete, and then posts a pre-signed S3 URL containing the results to a Microsoft teams channel. </p>
             
 		      </div>
 
@@ -442,8 +442,8 @@ function submitToAPI(e) {
 		      <img class="scale-with-grid" src="images/portfolio/modals/m-main-Page-2.jpg" alt="" />
 
 		      <div class="description-box">
-			      <h4>Console</h4>
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+			      <h4>Automated Emails Containing RDS Data</h4>
+			      <p>This Lambda function is invoked routinely by a cron expression with EventBridge. It queries an RDS database, generates a CSV file, and sends it as an email attachment. </p>
                
 		      </div>
 
@@ -458,8 +458,8 @@ function submitToAPI(e) {
 		      <img class="scale-with-grid" src="images/portfolio/modals/m-main-Page-3.jpg" alt="" />
 
 		      <div class="description-box">
-			      <h4>Judah</h4>
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+			      <h4>Internal Endpoint that Creates an EC2</h4>
+			      <p>When a user fills out a form, the results pass through an API gateway to a Lambda function, are recorded in DynamoDB, trigger a Cloudformation stack creation (which creates the Ec2), and an email is sent to the user. </p>
             
 		      </div>
 
@@ -475,7 +475,7 @@ function submitToAPI(e) {
 
 		      <div class="description-box">
 			      <h4>This Website</h4>
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+			      <p>This website resides in an S3 bucket located behind a CloudFront distribution, with another pair serving as a redirect. The contact form uses an API Gateway, Lambda function, DynamoDB, and Simple Email Service to record an email any responses. </p>
               
 		      </div>
 
