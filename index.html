@@ -18,7 +18,7 @@
 <script>
 function submitToAPI(e) {
        e.preventDefault();
-       var URL = "https://hhmvl7pc53.execute-api.us-east-2.amazonaws.com/prod";
+       var URL = "https://9rkolku2c4.execute-api.us-east-2.amazonaws.com/prod";
 
        var contactName = $("#contactName").val();
        var contactEmail = $("#contactEmail").val();
@@ -33,7 +33,7 @@ function submitToAPI(e) {
 
        $.ajax({
          type: "POST",
-         url : "https://hhmvl7pc53.execute-api.us-east-2.amazonaws.com/prod",
+         url : "https://9rkolku2c4.execute-api.us-east-2.amazonaws.com/prod",
          dataType: "json",
          crossDomain: "true",
          contentType: "application/json; charset=utf-8",
