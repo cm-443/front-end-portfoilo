@@ -33,7 +33,7 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   background: #161415 url(../images/header-background.jpg) no-repeat top center;
+   background: #161415 url(../images/header-background.jpeg) no-repeat top center;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    text-align: center;
@@ -52,7 +52,7 @@ header .banner {
    vertical-align: middle;
    margin: 0 auto;
    width: 85%;
-   padding-bottom: 30px;s
+   padding-bottom: 30px;
    text-align: center;
 }
 
@@ -236,14 +236,14 @@ ul#nav li.current a { color: #F06000; }
 /* ------------------------------------------------------------------ */
 
 #resume {
-   background: #fff;
+   background: #1C1C21;
    padding-top: 90px;
    padding-bottom: 72px;
    overflow: hidden;
 }
 
 #resume a, #resume a:visited  { color: #11ABB0; }
-#resume a:hover, #resume a:focus { color: #313131; }
+#resume a:hover, #resume a:focus { color: #BFBFBF; }
 
 #resume h1 {
    font: 18px/24px 'opensans-bold', sans-serif;
@@ -304,7 +304,7 @@ ul#nav li.current a { color: #F06000; }
 }
 .bars li em {
 	font: 15px 'opensans-bold', sans-serif;
-   color: #313131;
+   color: #BFBFBF;
 	text-transform: uppercase;
    letter-spacing: 2px;
 	font-weight: normal;
@@ -356,9 +356,15 @@ ul#nav li.current a { color: #F06000; }
   	-webkit-animation: jquery 2s ease;
 }
 
+.documentation {
+   width: 85%;
+   -moz-animation: documentation 2s ease;
+   -webkit-animation: documentation 2s ease;
+}
+
 @-moz-keyframes photoshop {
   0%   { width: 0px;  }
-  100% { width: 60%;  }
+  100% { width: 80%;  }
 }
 @-moz-keyframes illustrator {
   0%   { width: 0px;  }
@@ -383,7 +389,7 @@ ul#nav li.current a { color: #F06000; }
 
 @-webkit-keyframes photoshop {
   0%   { width: 0px;  }
-  100% { width: 60%;  }
+  100% { width: 80%;  }
 }
 @-webkit-keyframes illustrator {
   0%   { width: 0px;  }
@@ -639,7 +645,7 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 #testimonials {
-   background: #1F1F1F url(../images/testimonials-bg.jpg) no-repeat center center;
+   background: #1F1F1F url(../images/testimonials-bg.jpeg) no-repeat center center;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    background-attachment: fixed;
@@ -670,6 +676,12 @@ call-to-action .button {
    text-align: left;
    float: left;
    color: #fff;
+}
+
+.new {
+   padding-top: 180px;
+   padding-bottom: 120px;
+
 }
 
 /*	Blockquotes */

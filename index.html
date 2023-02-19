@@ -14,10 +14,50 @@
   gtag('config', 'G-G511GBVQH8');
 </script>
 
+	  <!-- javascript for api gateway -->
+<script>
+function submitToAPI(e) {
+       e.preventDefault();
+       var URL = "https://ql5fki991d.execute-api.us-east-2.amazonaws.com/prod";
+
+       var contactName = $("#contactName").val();
+       var contactEmail = $("#contactEmail").val();
+       var contactSubject = $("#contactSubject").val();
+       var contactMessage = $("#contactMessage").val();
+       var data = {
+          contactName : contactName,
+          contactEmail : contactEmail,
+          contactSubject : contactSubject,
+          contactMessage : contactMessage
+        };
+
+       $.ajax({
+         type: "POST",
+         url : "https://ql5fki991d.execute-api.us-east-2.amazonaws.com/prod",
+         dataType: "json",
+         crossDomain: "true",
+         contentType: "application/json; charset=utf-8",
+         data: JSON.stringify(data),
+
+         
+         success: function () {
+           // clear form and show a success message
+           alert("Message Sent");
+           document.getElementById("contact-form").reset();
+       location.reload();
+         },
+         error: function () {
+           // show an error message
+           alert("Error");
+         }});
+     }	
+	
+</script>
+
    <!--- Basic Page Needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>Welcome</title>
+	<title>Hello There!</title>
 	<meta name="description" content="">
 	<meta name="author" content="CM-443">
 
@@ -57,8 +97,7 @@
             <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
             <li><a class="smoothscroll" href="#about">About</a></li>
 	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
-            <li><a class="smoothscroll" href="#portfolio">Works</a></li>
-            <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
+            <li><a class="smoothscroll" href="#testimonials">Diagrams</a></li>
             <li><a class="smoothscroll" href="#contact">Contact</a></li>
          </ul> <!-- end #nav -->
 
@@ -66,7 +105,7 @@
 
       <div class="row banner">
          <div class="banner-text">
-            <h1 class="responsive-headline">Hi, I'm in Beta!!</h1>
+            <h1 class="responsive-headline">Hi, I'm Christine!</h1>
             <h3>I'm a Michigan based cloud engineer who builds awesome aws infrastructure and revels in automating away toil. Let's <a class="smoothscroll" href="#about">start scrolling</a>
             and learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
             <hr />
@@ -100,12 +139,11 @@
 
             <h2>About Me</h2>
 
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-            voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-            sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+            <p>Thank you for viewing my portfolio! Below, you will find my resume, diagrams of 
+               AWS projects I’ve worked on, 
+               and a contact form built with serverless infrastructure. 
+               In my free time, I enjoy reading, gaming, hiking, astronomy, gardening, and traveling. 
+               The best book I've read (or listened to on audible rather) recently was Leviathan Falls by James S. A. Corey and <i>my</i> GotY was GoW: Ragnarok. 
             </p>
 
             <div class="row">
@@ -141,14 +179,18 @@
 
                <div class="twelve columns">
 
-                  <h3>CL</h3>
+                  <h3>ClassLink</h3>
                   <p class="info">Cloud Engineer<span>&bull;</span> <em class="date">March 2022 - Present</em></p>
 
                   <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-                  ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                  Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.
+                     Automate processes with lambda functions using the Python boto3 library. 
+                     Reduce AWS costs by automating the start and stop times of resources.
+                     Modernize infrastructure with containerization, Fargate, and Terraform. 
+                     Respond quickly to DDoS attacks and mitigate with Athena and WAF.
+                     Deploy pipelines, elastic beanstalk environments, and other resources with Cloudformation.
+                     Attend software releases and assist with percentage-based rollouts.
+                     Create and revise IAM roles and policies with principle of least privilege. 
+                     Create users and grant permissions on MySQL databases.
                   </p>
 
                </div>
@@ -210,9 +252,10 @@
 					   <li><span class="bar-expand photoshop"></span><em>AWS</em></li>
                   <li><span class="bar-expand illustrator"></span><em>Python</em></li>
 						<li><span class="bar-expand wordpress"></span><em>Terraform</em></li>
+                  <li><span class="bar-expand documentation"></span><em>Documentation</em></li>
 						<li><span class="bar-expand css"></span><em>MySQL</em></li>
 						<li><span class="bar-expand html5"></span><em>Grafana</em></li>
-                  <li><span class="bar-expand jquery"></span><em>Communication</em></li>
+                  <li><span class="bar-expand jquery"></span><em>Soft Skills</em></li>
 					</ul>
 
 				</div><!-- end skill-bars -->
@@ -224,7 +267,7 @@
 
                  <!-- Certifications
       ----------------------------------------------- -->
-      <div class="row education">
+      <div class="row work">
 
          <div class="three columns header-col">
             <h1><span>Certifications</span></h1>
@@ -237,7 +280,7 @@
                <div class="twelve columns">
 
                   <h3>AWS Certified Solutions Architect Associate</h3>
-                  <p class="info">Issued by Amazon<span>&bull;</span></p>
+                  <p class="info">Issued by Amazon</p>
                   <ul>
                      <li><a href="https://www.credly.com/badges/9ce08444-ea47-4419-992b-bfad9690b005/public_url" target="_blank">More Info</a></li>   
                   </ul>
@@ -250,7 +293,7 @@
                <div class="twelve columns">
 
                   <h3>Microsoft Certified: Azure Fundamentals</h3>
-                  <p class="info">Issued by Microsoft<span>&bull;</span></p>
+                  <p class="info">Issued by Microsoft</p>
 
                   <ul>
                      <li><a href="https://www.credly.com/badges/77d55d52-48ae-4334-939b-a0dce67558f8/public_url" target="_blank">More Info</a></li>   
@@ -295,90 +338,12 @@
       <!-- Testimonials Section
    ================================================== -->
    <section id="testimonials">
-
-      <div class="text-container">
-
-         <div class="row">
-
-            <div class="two columns header-col">
-
-               <h1><span>Client Testimonials</span></h1>
-
-            </div>
-
-            <div class="ten columns flex-container">
-
-               <div class="flexslider">
-
-                  <ul class="slides">
-
-             
-                                    <!-- portfolio-wrapper -->
-            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
-
-               <div class="columns portfolio-item">
-                 <div class="item-wrap">
-
-                    <a href="#modal-01" title="">
-                       <img alt="" src="images/portfolio/drawiosnip.png">
-                       <div class="overlay">
-                          <div class="portfolio-item-meta">
-                              <h5>Site Architecture</h5>
-                             <p>Illustrration</p>
-                           </div>
-                       </div>
-                       <div class="link-icon"><i class="icon-plus"></i></div>
-                    </a>
-
-                 </div>
-               </div> <!-- item end -->
-
-                     </li> <!-- slide ends -->
-
-                  </ul>
-
-               </div> <!-- div.flexslider ends -->
-
-            </div> <!-- div.flex-container ends -->
-
-         </div> <!-- row ends -->
-
-       </div>  <!-- text-container ends -->
-
-       
-
-         <!-- Modal Popup
-	      --------------------------------------------------------------- -->
-
-         <div id="modal-01" class="popup-modal mfp-hide">
-
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-drawiosnip.png" alt="" /> 
-
-		      <div class="description-box">
-			      <h4>Site Architecture</h4>
-			      <p>Here we got stuff.</p>
-               <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
-		      </div>
-
-            <div class="link-box">
-               <a href="http://www.behance.net" target="_blank">Details</a>
-		         <a class="popup-modal-dismiss">Close</a>
-            </div>
-
-	      </div><!-- modal-01 End -->
-
-   </section> <!-- Testimonials Section End-->
-
-
-   <!-- Portfolio Section
-   ================================================== -->
-   <section id="portfolio">
-
+     <div class="new">
       <div class="row">
 
          <div class="twelve columns collapsed">
 
-            <h1>Site Architecture</h1>
+            <h1>Project Diagrams</h1>
 
             <!-- portfolio-wrapper -->
             <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
@@ -387,11 +352,57 @@
                   <div class="item-wrap">
 
                      <a href="#modal-01" title="">
-                        <img alt="" src="images/portfolio/drawiosnip.png">
+                        <img alt="" src="images/portfolio/main-Page-1.jpg">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
-          					      <h5>Site Architecture</h5>
-                              <p>Illustrration</p>
+          					      <h5>Automated DDoS Response</h5>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-02" title="">
+                        <img alt="" src="images/portfolio/main-Page-2.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Automated Emails Containing RDS Data</h5>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-03" title="">
+                        <img alt="" src="images/portfolio/main-Page-3.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Internal Endpoint that Creates an EC2</h5>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-04" title="">
+                        <img alt="" src="images/portfolio/main-Page-4.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>This Website</h5>
           					   </div>
                         </div>
                         <div class="link-icon"><i class="icon-plus"></i></div>
@@ -409,30 +420,79 @@
          <!-- Modal Popup
 	      --------------------------------------------------------------- -->
 
+
          <div id="modal-01" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-drawiosnip.png" alt="" /> 
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-main-Page-1.jpg" alt="" />
 
 		      <div class="description-box">
-			      <h4>Site Architecture</h4>
-			      <p>Here we got stuff.</p>
-               <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+			      <h4>Automated DDoS Response</h4>
+			      <p>When a traffic metric is breached, an SNS topic invokes a Lambda function that queries Athena for suspicious ips, waits for the query to complete, and then posts a pre-signed S3 URL containing the results to a Microsoft teams channel. </p>
+            
 		      </div>
 
             <div class="link-box">
-               <a href="http://www.behance.net" target="_blank">Details</a>
 		         <a class="popup-modal-dismiss">Close</a>
             </div>
 
 	      </div><!-- modal-01 End -->
 
+         <div id="modal-02" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-main-Page-2.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Automated Emails Containing RDS Data</h4>
+			      <p>This Lambda function is invoked routinely by a cron expression with EventBridge. It queries an RDS database, generates a CSV file, and sends it as an email attachment. </p>
+               
+		      </div>
+
+            <div class="link-box">
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-02 End -->
+
+         <div id="modal-03" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-main-Page-3.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>Internal Endpoint that Creates an EC2</h4>
+			      <p>When a user fills out a form, the results pass through an API gateway to a Lambda function and are recorded in DynamoDB. It then triggers a Cloudformation stack creation (which creates the Ec2) and an email is sent to the user. </p>
+            
+		      </div>
+
+            <div class="link-box">
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-03 End -->
+
+         <div id="modal-04" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-main-Page-4.jpg" alt="" />
+
+		      <div class="description-box">
+			      <h4>This Website</h4>
+			      <p>This website resides in an S3 bucket located behind a CloudFront distribution, with another pair serving as a redirect. The contact form uses an API Gateway, Lambda function, DynamoDB, and Simple Email Service to record an email any responses. This also is configured with a github that automatically deploys any changes to the s3 bucket and invalidates the CloudFront distribution when a push to main occurs.</p>
+              
+		      </div>
+
+            <div class="link-box">
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-04 End -->
+
+
+
 
 
       </div> <!-- row End -->
 
-   </section> <!-- Portfolio Section End-->
-
-
+   </div>
+   </section> <!-- Testimonials Section End-->
 
 
 
@@ -451,9 +511,8 @@
 
          <div class="ten columns">
 
-               <p class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-               eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-               voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+               <p class="lead">Would you like to contact me? Go ahead and fill out this form! With a little JavaScript, 
+                  an API gateway, and a lambda function, I’ll be sure to receive your message and respond promptly!
                </p>
 
          </div>
@@ -465,17 +524,17 @@
          <div class="eight columns">
 
                <!-- form -->
-               <form action="" method="post" id="contactForm" name="contactForm">
+               <form method="post" id="contactForm" name="contactForm">
 					<fieldset>
-
-                  <div>
-						   <label for="contactName">Name <span class="required">*</span></label>
-						   <input type="text" value="" size="35" id="contactName" name="contactName">
-                  </div>
 
                   <div>
 						   <label for="contactEmail">Email <span class="required">*</span></label>
 						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
+                  </div>
+
+                  <div>
+						   <label for="contactName">Name <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="contactName" name="contactName">
                   </div>
 
                   <div>
@@ -489,9 +548,9 @@
                   </div>
 
                   <div>
-                     <button class="submit">Submit</button>
+                     <button class="submit" onClick="submitToAPI(event)">Submit</button>
                      <span id="image-loader">
-                        <img alt="" src="images/loader.gif">
+                       <!--  <img alt="" src="images/loader.gif"> -->
                      </span>
                   </div>
 
@@ -506,6 +565,52 @@
 				   </div>
 
             </div>
+
+<!-- ############################################################################# -->
+<div>
+
+   <div>
+
+         <!-- form -->
+         <!-- <form method="post" id="contactForm" name="contactForm"> -->
+            <form method="post" name="other">
+
+         <fieldset>
+
+            <div>
+               <label for="contactEmail">Email</label>
+               <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
+            </div>
+
+            <div>
+               <label for="contactName">Name</label>
+               <input type="text" value="" size="35" id="contactName" name="contactName">
+            </div>
+
+            <div>
+               <label for="contactSubject">Subject</label>
+               <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
+            </div>
+
+            <div>
+               <label for="contactMessage">Message </label>
+               <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+            </div>
+
+            <div>
+               <!-- <button class="submit" onClick="submitToAPI(event)">Submit</button> -->
+               <button onClick="submitToAPI(event)">Submit</button>
+
+            </div>
+
+         </fieldset>
+         </form> <!-- Form End -->
+         </div>
+         </div>
+
+
+<!-- ########################################################## -->
+
 
 
             <aside class="four columns footer-widgets">
@@ -526,6 +631,21 @@
 
    </section> <!-- Contact Section End-->
 
+
+<!-- ############################################################################ -->
+   <form id="contact-form" method="post">
+      <h4>Name:</h4>
+      <input type="text" style="height:35px;" id="name-input" placeholder="Enter name here…" class="form-control" style="width:100%;" /><br/>
+      <h4>Phone:</h4>
+      <input type="phone" style="height:35px;" id="phone-input" placeholder="Enter phone number" class="form-control" style="width:100%;"/><br/>
+      <h4>Email:</h4>
+      <input type="email" style="height:35px;" id="email-input" placeholder="Enter email here…" class="form-control" style="width:100%;"/><br/>
+      <h4>How can we help you?</h4>
+      <textarea id="description-input" rows="3" placeholder="Enter your message…" class="form-control" style="width:100%;"></textarea><br/>
+      <div class="g-recaptcha" data-sitekey="6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys" class="form-control" style="width:100%;"></div>
+      <button type="button" onClick="submitToAPI(event)" class="btn btn-lg" style="margin-top:20px;">Submit</button>
+</form>
+<!-- ###################################################################### -->
 
    <!-- footer
    ================================================== -->

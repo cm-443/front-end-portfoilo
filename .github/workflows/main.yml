@@ -20,4 +20,13 @@ jobs:
         aws-region: us-east-2
 
     - name: Deploy static site to S3 bucket
+<<<<<<< HEAD
       run: aws s3 sync . s3://beta.cm443.com --delete
+=======
+      run: aws s3 sync . s3://www.cm443.com --delete
+      
+    - name: Invalidate CloudFront distribution
+      run: aws cloudfront create-invalidation --distribution-id E1KSB8VGH87448 --paths "/*"
+      
+  
+>>>>>>> main

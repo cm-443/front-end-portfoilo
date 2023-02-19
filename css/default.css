@@ -141,7 +141,7 @@ html {
    -webkit-font-smoothing: antialiased;
 }
 
-body {
+body { 
    background: #fff;
    font-family: 'opensans-regular', sans-serif;
    font-weight: normal;
@@ -158,7 +158,7 @@ body {
 --------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-   color: #313131;
+   color: #BFBFBF;
 	font-family: 'opensans-bold', sans-serif;
    font-weight: normal;
 }
