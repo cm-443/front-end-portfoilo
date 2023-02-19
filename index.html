@@ -98,7 +98,7 @@ function submitToAPI(e) {
             <li><a class="smoothscroll" href="#about">About</a></li>
 	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
             <li><a class="smoothscroll" href="#testimonials">Diagrams</a></li>
-            <li><a class="smoothscroll" href="#contact">Contact</a></li>
+            <!-- <li><a class="smoothscroll" href="#contact">Contact</a></li> -->
          </ul> <!-- end #nav -->
 
       </nav> <!-- end #nav-wrap -->
@@ -139,9 +139,8 @@ function submitToAPI(e) {
 
             <h2>About Me</h2>
 
-            <p>Thank you for viewing my portfolio! Below, you will find my resume, diagrams of 
-               AWS projects I’ve worked on, 
-               and a contact form built with serverless infrastructure. 
+            <p>Thank you for viewing my portfolio! Below, you will find my resume and diagrams of 
+               AWS projects I’ve worked on. 
                In my free time, I enjoy reading, gaming, hiking, astronomy, gardening, and traveling. 
                The best book I've read (or listened to on audible rather) recently was Leviathan Falls by James S. A. Corey and <i>my</i> GotY was GoW: Ragnarok. 
             </p>
@@ -475,7 +474,7 @@ function submitToAPI(e) {
 
 		      <div class="description-box">
 			      <h4>This Website</h4>
-			      <p>This website resides in an S3 bucket located behind a CloudFront distribution, with another pair serving as a redirect. The contact form uses an API Gateway, Lambda function, DynamoDB, and Simple Email Service to record an email any responses. This also is configured with a github that automatically deploys any changes to the s3 bucket and invalidates the CloudFront distribution when a push to main occurs.</p>
+			      <p>This website resides in an S3 bucket located behind a CloudFront distribution, with another pair serving as a redirect. The contact form (in beta) uses an API Gateway, Lambda function, DynamoDB, and Simple Email Service to record an email any responses. This also is configured with a github that automatically deploys any changes to the s3 bucket and invalidates the CloudFront distribution when a push to main occurs.</p>
               
 		      </div>
 
@@ -496,156 +495,6 @@ function submitToAPI(e) {
 
 
 
-
-   <!-- Contact Section
-   ================================================== -->
-   <section id="contact">
-
-      <div class="row section-head">
-
-         <div class="two columns header-col">
-
-            <h1><span>Get In Touch.</span></h1>
-
-         </div>
-
-         <div class="ten columns">
-
-               <p class="lead">Would you like to contact me? Go ahead and fill out this form! With a little JavaScript, 
-                  an API gateway, and a lambda function, I’ll be sure to receive your message and respond promptly!
-               </p>
-
-         </div>
-
-      </div>
-
-      <div class="row">
-
-         <div class="eight columns">
-
-               <!-- form -->
-               <form method="post" id="contactForm" name="contactForm">
-					<fieldset>
-
-                  <div>
-						   <label for="contactEmail">Email <span class="required">*</span></label>
-						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
-                  </div>
-
-                  <div>
-						   <label for="contactName">Name <span class="required">*</span></label>
-						   <input type="text" value="" size="35" id="contactName" name="contactName">
-                  </div>
-
-                  <div>
-						   <label for="contactSubject">Subject</label>
-						   <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
-                  </div>
-
-                  <div>
-                     <label for="contactMessage">Message <span class="required">*</span></label>
-                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
-                  </div>
-
-                  <div>
-                     <button class="submit" onClick="submitToAPI(event)">Submit</button>
-                     <span id="image-loader">
-                       <!--  <img alt="" src="images/loader.gif"> -->
-                     </span>
-                  </div>
-
-					</fieldset>
-				   </form> <!-- Form End -->
-
-               <!-- contact-warning -->
-               <div id="message-warning"> Error</div>
-               <!-- contact-success -->
-				   <div id="message-success">
-                  <i class="fa fa-check"></i>Your message was sent, thank you!<br>
-				   </div>
-
-            </div>
-
-<!-- ############################################################################# -->
-<div>
-
-   <div>
-
-         <!-- form -->
-         <!-- <form method="post" id="contactForm" name="contactForm"> -->
-            <form method="post" name="other">
-
-         <fieldset>
-
-            <div>
-               <label for="contactEmail">Email</label>
-               <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
-            </div>
-
-            <div>
-               <label for="contactName">Name</label>
-               <input type="text" value="" size="35" id="contactName" name="contactName">
-            </div>
-
-            <div>
-               <label for="contactSubject">Subject</label>
-               <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
-            </div>
-
-            <div>
-               <label for="contactMessage">Message </label>
-               <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
-            </div>
-
-            <div>
-               <!-- <button class="submit" onClick="submitToAPI(event)">Submit</button> -->
-               <button onClick="submitToAPI(event)">Submit</button>
-
-            </div>
-
-         </fieldset>
-         </form> <!-- Form End -->
-         </div>
-         </div>
-
-
-<!-- ########################################################## -->
-
-
-
-            <aside class="four columns footer-widgets">
-
-               <div class="widget widget_contact">
-
-
-				   </div>
-
-               <div class="widget widget_tweets">
-
-
-		         </div>
-
-            </aside>
-
-      </div>
-
-   </section> <!-- Contact Section End-->
-
-
-<!-- ############################################################################ -->
-   <form id="contact-form" method="post">
-      <h4>Name:</h4>
-      <input type="text" style="height:35px;" id="name-input" placeholder="Enter name here…" class="form-control" style="width:100%;" /><br/>
-      <h4>Phone:</h4>
-      <input type="phone" style="height:35px;" id="phone-input" placeholder="Enter phone number" class="form-control" style="width:100%;"/><br/>
-      <h4>Email:</h4>
-      <input type="email" style="height:35px;" id="email-input" placeholder="Enter email here…" class="form-control" style="width:100%;"/><br/>
-      <h4>How can we help you?</h4>
-      <textarea id="description-input" rows="3" placeholder="Enter your message…" class="form-control" style="width:100%;"></textarea><br/>
-      <div class="g-recaptcha" data-sitekey="6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys" class="form-control" style="width:100%;"></div>
-      <button type="button" onClick="submitToAPI(event)" class="btn btn-lg" style="margin-top:20px;">Submit</button>
-</form>
-<!-- ###################################################################### -->
 
    <!-- footer
    ================================================== -->
